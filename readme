@@ -1,0 +1,80 @@
+# 🧠 Image Classification with CNN
+
+This project demonstrates a **Convolutional Neural Network (CNN)** built using TensorFlow and Keras for **multi-class image classification** on the CIFAR-10 dataset.  
+It is deployed as a **Streamlit web app** that allows users to upload an image and get real-time predictions.
+
+---
+
+## 🚀 Project Overview
+
+- Trained a deep learning **CNN model** on the **CIFAR-10 dataset** (10 image categories such as airplane, car, cat, dog, etc.)
+- Implemented techniques like **Data Augmentation**, **Dropout**, and **Early Stopping** to improve accuracy and prevent overfitting.
+- Achieved around **85% test accuracy** on the CIFAR-10 dataset.
+- Built an **interactive Streamlit app** for image upload and live classification.
+
+---
+
+## 🧩 Technologies Used
+
+| Category | Tools / Libraries |
+|-----------|-------------------|
+| Language | Python |
+| Deep Learning | TensorFlow, Keras |
+| Data Handling | NumPy, OpenCV |
+| Visualization | Matplotlib |
+| Web App | Streamlit |
+| Deployment | Streamlit Cloud |
+
+---
+
+## 🗂️ Dataset
+
+- **Dataset:** [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+- Automatically loaded using `tensorflow.keras.datasets.cifar10`.
+
+Each image is **32x32 pixels** and belongs to one of 10 classes:
+airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
+
+Input (32x32x3)
+│
+├── Conv2D (32 filters, 3x3) + ReLU + MaxPooling
+├── Conv2D (64 filters, 3x3) + ReLU + MaxPooling
+├── Conv2D (128 filters, 3x3) + ReLU + MaxPooling
+├── Flatten
+├── Dense (128 units, ReLU)
+├── Dropout (0.5)
+└── Dense (10 units, Softmax)
+
+
+---
+
+## 📊 Results
+
+- **Training Accuracy:** ~90%
+- **Test Accuracy:** ~85%
+- **Optimizer:** Adam  
+- **Loss Function:** Categorical Crossentropy  
+
+Sample output predictions 👇
+
+📁 `/output_screenshots/` *(contains example prediction images)*
+
+---
+
+## 💻 Streamlit App Usage
+
+### ▶️ Run locally
+
+```bash
+streamlit run app.py
+
+🌐 Or access the live demo
+👉 Live Demo: https://imageclassification-with-cnn.streamlit.app
+
+Requirements
+
+Install dependencies before running the app:
+
+pip install -r requirements.txt
+
+
