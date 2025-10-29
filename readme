@@ -68,8 +68,6 @@ Sample output predictions 👇
 ```bash
 streamlit run app.py
 
-🌐 Or access the live demo
-👉 Live Demo: https://imageclassification-with-cnn.streamlit.app
 
 Requirements
 
